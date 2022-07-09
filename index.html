@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta name="author" content="Kis-Simonka Dénes">
+    <meta name="description" content="Esélylesők weblapja, ahol érdekes információk vannak a foci viláról.">
+    <link href="kepek\focilabda.png" rel="icon" type="image/x-icon">
+    <title>Focis infók</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>  
+    <header>
+        <nav>
+            <a href="index.html"><img src="kepek/logoka.png" alt="" id="W"></a>
+        <div class="navi" id="navi">        
+            <i class="fa fa-times" onclick="Hidemenu()"></i>
+            
+            <ul>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="kulfoldifoci.html">Stadionok</a></li>
+                <li><a href="otpbankliga.html">OTP-bank liga</a></li>
+                <li><a href="magyarvalogatott.html">Magyar válogatott</a></li>
+                <li><a href="webshop.html">WebShop</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class="focim">Üdvözöllek az esélylesők honlapján</h1>
+    <hr>
+    </header>
+    <div class="container">
+        <article>
+            <div>
+            <p class="koszonto">
+                Ezen az oldalon érdekes információkat olvashatsz a magyar NBI1 és a magyar válogatottal kapcsolatban,emellett  a legszebb magyar stadionokról is olvashatsz. Továbbá megvásárolhatod a legfrisseb mercheket <a href="webshop.html">itt</a>.
+            </p>
+            <p class="hirlevel">
+                Íratkozz fel hírlevelünkre annak érdekében, hogy ne maradj le a legfrissebb hírekről. 
+            </p>
+           
+           <div class="igazitas">
+               <form method="post" action="http://szamtud.uni-corvinus.hu/~blang/receive.php" >
+           
+                <figure><img src="kepek\hirlevel.png" alt="Hírlevel" class="kepetkicsire2"></figure>
+                <table >
+                <tr>
+                    <td>
+                        <label for="nev">Teljes név:</label>
+                        <input type="text" name="nev" id="nev">
+                        <br>
+						<label for="email">E-mail cím: </label>
+                        <input type="text" name="email" id="email">
+                        <br>
+                        <input type="submit" value="Küldés" name="kuld">
+                        <input type="reset" value="Alaphelyzet" name="alap">
+						<br>
+                    </td>
+                </tr>
+                
+            </table>
+            </form>
+        </div> 
+        </article>
+        <aside class="index_aside">
+            <h2>Hasznos weboldal linkek</h2>
+            <h3>Nemzeti Sport</h3>
+            <div class="aside_igazitas">
+                <p>A <a href="https://www.nemzetisport.hu/" target="_blank">Nemzeti Sport</a>-on olvashatod a legfrissebb
+                 és legérdekesebb sporteseményeket és híreket.</p>
+            </div>
+            <figure>
+                <img src="kepek\nso.png" alt="Nemzeti Sport Logó Logó" class="kicsinyítés" >
+            </figure>
+            <h3>Eredmények</h3>
+            <div class="aside_igazitas">
+                <p>Az eredményeket és elő statisztikákat az <a href="https://www.eredmenyek.com/" target="_blank">Eredmények</a>
+                     oldalon követheted.</p>
+            </div>
+            <figure>
+                <img src="kepek\eredmenyek.png" alt="Eredmenyek Logó" class="kicsinyítés" >
+            </figure>
+            
+            <h3>Elő meccsek</h3>
+            <div class="aside_igazitas">
+                <p>Díjmentesen és élőben tudod nézni HD minőségben az összes OTP-bank liga
+                     és Magyar válogatott meccset az <a href="https://m4sport.hu/elo/mtv4live/" target="_blank">m4Sport</a> oldalán</p>
+            </div><figure>
+                <img src="kepek\m4sportlogo.png" alt="m4sport Logó" class="kicsinyítés" >
+            </figure>
+                
+                
+                
+           
+        </aside>
+    </div>
+    <footer>
+        Budapest Corvinus Egyetem - Webfejlesztés tárgy <br>
+        © Kis-Simonka Dénes 2022 
+    </footer>
+
+
+
+</body>
+
+<script>
+    var navi =document.getElementById("navi");
+    function showMenu()
+    {
+       navi.style.right="0";
+    }
+    function Hidemenu()
+    {
+       navi.style.right="-200px";
+    }
+</script>
+</html>

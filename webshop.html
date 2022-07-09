@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+	<meta name="author" content="Kis-Simonka Dénes">
+    <meta name="description" content="Esélylesők weblapja, ahol érdekes információk vannak a foci viláról.">
+    <link href="kepek\focilabda.png" rel="icon" type="image/x-icon">
+    <title>Focis infók</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+
+  
+    <script>
+        $(document).ready(function(){
+            $("#jqueryForm").validate({
+                
+                rules: {
+                    k_nev: "required",
+                    v_nev: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    tel:"required",
+                    irsz:{
+                        required:true,
+                        length:4
+                    },
+                    varos:"required",
+                    utca:"required",
+                    hsz:"required",
+                    elfogadas:"required"
+                    
+                 
+                },
+                messages: {
+                    k_nev: " Írd be a keresztneved!",
+                    v_nev: " Írd be a vezetékneved!",
+                    email: " Kérlek valós email címet adj meg!",
+                    tel:"Add meg a telefonszámodat!",
+                    irsz:"Írd be az irányítószámondat!",
+                    varos:"Írd be a városod nevét!",
+                    utca:"Írd be az utcád nevét!",
+                    hsz:"Írd be a házszámod!",
+                    elfogadas:"Fogadd el a vásárlási feltételeket!"
+                },
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <form method="post" action="http://szamtud.uni-corvinus.hu/~blang/receive.php">
+    <header>
+        <nav>
+            <a href="index.html"><img src="kepek\logoka.png" alt="" id="W"></a>
+        <div class="navi" id="navi">        
+            <i class="fa fa-times" onclick="Hidemenu()"></i>
+            
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="kulfoldifoci.html">Stadionok</a></li>
+                <li><a href="otpbankliga.html">OTP-bank liga</a></li>
+                <li><a href="magyarvalogatott.html">Magyar válogatott</a></li>
+                <li><a href="#" class="active">WebShop</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class="focim">Merchandise</h1>
+    <hr>
+    </header>
+    <div class="container">
+        <article class="webshop_termekek">
+           <table>
+               <tr>
+                   <td colspan="2" class="kozepre" >HOODIE BASIC (UNISEX)</td>
+                   
+               </tr>
+               <tr>
+                   <td rowspan="2"><figure><img src="kepek\hoodie.png" alt="Hoodie"></figure></td>  
+               </tr>
+               <tr>
+                   <td>Ára:12000Ft
+                   <br>
+                   <label for="meretvalasztas_hoodie">Válassz méretet:
+                    <select size="1" name="hoodiemeret" id="meretvalasztas_hoodie" >
+                        <option value="hoodiemeret_s">S</option>
+                        <option value="hoodiemeret_m" selected>M</option>
+                        <option value="hoodiemeret_l">L</option>
+                        <option value="hoodiemeret_xl">XL</option>
+                        <option value="hoodiemeret_xxl">XXL</option>
+                      </select>
+                   </label>
+                   <br>
+					<label for="db_hoodie">
+						Darabszám (Maximum 10) <input type="number"  name="db_hoodiee" id="db_hoodie" min="0" value="0" max="10">
+					</label>
+                    <br>
+                    <label for="hoodie_felirat_hatul">
+                      Feliratot szeretnék a termék hátuljára (500Ft)
+                      <label for="felirat_hoodie_igen"> Igen
+                        <input type="checkbox" name="felirat_hoodie_igen" id="hoodie_felirat" value="igen">
+                        </label>
+                      <br>
+                      Szöveg:
+                    <input type="text" name="hoodie_felirat_hatul" id="hoodie_felirat_hatul">
+                    </label>
+                    <br>
+                    <label for="hoodie_szam_hatul">
+                      Számot szeretnék a termék hátuljára (500Ft)
+                      <label for="hoodie_szam_hatul">
+                        Igen<input type="checkbox" name="szam_hoodie_igen" id="hoodie_szam" value="igen">
+                      </label>
+                      <br>
+                      Szöveg:
+                    <input type="text" name="hoodie_szam_hatul" id="hoodie_szam_hatul">
+                    </label>
+                </td>       
+               </tr>
+           </table>
+           <table>
+            <tr>
+                <td colspan="2" class="kozepre" >Hivatalos Válogatott mez (piros) 2021</td>
+                
+            </tr>
+            <tr>
+                <td rowspan="2"><figure><img src="kepek\hivatalosmez.png" alt="Hivatalos magyr mez"></figure></td>  
+            </tr>
+            <tr>
+                <td>Ára:10000Ft
+                <br>
+                <label for="meretvalasztas_mez">Válassz méretet:
+                 <select size="1" name="mezmeret" id="meretvalasztas_mez" >
+                     <option value="mezmeret_s">S</option>
+                     <option value="mezmeret_m" selected>M</option>
+                     <option value="mezmeret_l">L</option>
+                     <option value="mezmeret_xl">XL</option>
+                     <option value="mezmeret_xxl">XXL</option>
+                   </select>
+                </label>
+                <br>
+                 <label for="db_mez">
+                     Darabszám (Maximum 10) <input type="number" name="db_mez" id="db_mez" min="0" value="0" max="10">
+                 </label>
+                 <br>
+                 <label for="mez_felirat_hatul">
+                   Feliratot szeretnék a termék hátuljára (500Ft)
+                   <label for="felirat_mez_igen"> Igen
+                     <input type="checkbox" name="felirat_mez_igen" id="polo_felirat" value="igen">
+                     </label>
+                   <br>
+                   Szöveg:
+                 <input type="text" name="mez_felirat_hatul" id="mez_felirat_hatul">
+                 </label>
+                 <br>
+                 <label for="mez_szam_hatul">
+                   Számot szeretnék a termék hátuljára (500Ft)
+                   <label for="mez_szam_hatul">
+                    Igen <input type="checkbox" name="szam_mez_igen" id="polo_szam" value="igen">
+                   </label>
+                   <br>
+                   Szöveg:
+                 <input type="text" name="mez_szam_hatul" id="mez_szam_hatul">
+                 </label>
+             </td>       
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="2" class="kozepre" >Hivatalos Válogatott kötött sál </td>
+            </tr>
+            <tr>
+                <td rowspan="2"><figure><img src="kepek\magyarsal.png" alt="Hivatalos magyar sál"></figure></td>  
+            </tr>
+            <tr>
+                <td>Ára:5800Ft
+                <br>
+                 <label for="db_mez">
+                     Darabszám (Maximum 10) <input type="number" name="db_mez" id="db_sal" min="0" value="0" max="10">
+                 </label>
+                 <br>
+                 <label for="sal_felirat">
+                   Feliratot szeretnék a sálra (500Ft) igen
+                   <label for="felirat_sal_igen">
+                     <input type="checkbox" name="felirat_sal_igen" id="sal_felirat" value="igen">
+                     </label>
+                   <br>
+                   Szöveg:
+                 <input type="text" name="sal_felirat" id="sal_felirat">
+                 </label>
+                 <br>
+                 <label for="sal_szin">
+                    Válaszd ki a szöveg színét :
+                     <input type="color" name="" id="sal_szin">
+                 </label>
+                <br>
+             </td>       
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="Összeg kiszámítása" id="vegosszeg" onclick="osszeg()">
+        <input type="text" id="eredmeny" size="10">
+        <label><input type="submit" value="Rendelés leadása"></label>
+        <label><input type="reset" value="Minden alaphelyzetbe állítása"></label>
+    </form>
+</article>
+        <aside>
+            <h2>Szállítási adatok</h2>
+                <form action="http://szamtud.uni-corvinus.hu/~blang/receive.php" class="rendelesiform" method="post" id="jqueryForm" novalidate>
+                <label for="k_nev">
+                    Keresztnév: <input type="text" id="k_nev" name="k_nev">
+                </label>
+                <br>
+                <label for="v_nev">
+                    Vezetéknév: <input type="text" id="v_nev" name="v_nev">
+                </label>
+                <br>
+                <label for="email">
+                    Email cím: <input type="email" id="email" name="email">
+                </label>
+                <br>
+                <label for="tel">
+                    Telefonszám: <input type="tel" id="tel" name="tel">
+                </label>
+                <br>
+                <label for="irsz">
+                    Irányítószám: <input type="text" id="irsz" name="irsz">
+                </label>
+                <br>
+                <label for="varos">
+                    Város: <input type="text" id="varos" name="varos">
+                </label>
+                <br>
+                <label for="utca">
+                    Utca: <input type="text" id="utca" name="utca">
+                </label>
+                <br>
+                <label for="hsz">
+                    Házszám: <input type="number" id="hsz" name="hsz">
+                </label>
+                <br>
+                Amennyiben időzítve szeretné kérni a rendelését, kérem válassza ki a kiszállítási dátumot.
+                <br>
+                <label for="szall_datum">
+                    Dátum: <input type="date" id="szall_datum" name="szall_datum">
+                </label>
+                <br>
+                <label for="elfogadas">
+                 Vásárlási feltételek elfogadása: <input type="checkbox" name="elfogadas" id="elfogadas">
+                </label>
+                <br>
+                <label for="subm">
+                    <input type="submit" id="subm" value="Elküld" name="subm">
+                </label>
+                <br>
+                <label for="res">
+           <input type="reset" name="" id="res" value="Visszaállít alaphelyzetbe" name="res">
+                </label>
+            </form>
+        </aside>
+    </div>
+    <footer>
+        Budapest Corvinus Egyetem - Webfejlesztés tárgy <br>
+        © Kis-Simonka Dénes 2022 
+    </footer>
+
+
+
+</body>
+
+<script>
+    var navi =document.getElementById("navi");
+    function showMenu()
+    {
+       navi.style.right="0";
+    }
+    function Hidemenu()
+    {
+       navi.style.right="-200px";
+    }
+    function osszeg()
+    {
+     var hoodie_egysegar=12000;
+     var polo_egysegar=10000;
+     var sal_egysegar=5800;
+     
+     let hoodie_dbszam=document.getElementById("db_hoodie").value;
+     let polo_dbszam=document.getElementById("db_mez").value;
+     let sal_dbszam=document.getElementById("db_sal").value;
+
+     let hoodie_felirat=0;
+     let hoodie_szam=0;
+     if(document.getElementById("hoodie_felirat").checked)
+     {
+        hoodie_felirat+=500*hoodie_dbszam;
+     }
+     if(document.getElementById("hoodie_szam").checked)
+     {
+        hoodie_szam+=500*hoodie_dbszam;
+     }
+
+     let polo_felirat=0;
+     let polo_szam=0;
+
+     if(document.getElementById("polo_felirat").checked)
+     {
+        polo_felirat+=500*polo_dbszam;
+     }
+     if(document.getElementById("polo_szam").checked)
+     {
+        polo_szam+=500*polo_dbszam;
+     }
+
+     let sal_felirat=0;
+     if(document.getElementById("sal_felirat").checked)
+     {
+        sal_felirat+=500*sal_dbszam;
+     }
+
+     let vegosszeg=(hoodie_dbszam*hoodie_egysegar+hoodie_felirat+hoodie_szam)+(polo_dbszam*polo_egysegar+polo_felirat+polo_szam)+(sal_dbszam*sal_egysegar+sal_felirat);
+    document.getElementById("eredmeny").value = vegosszeg;
+
+    }
+</script>
+</html>

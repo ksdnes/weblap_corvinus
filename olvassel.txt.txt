@@ -1,0 +1,28 @@
+1.Az oldal készítőjének a neve: Kis-Simonka Dénes
+
+2.A weboldal rövid leírása: 
+Ezen weboldal azoknak a focirajongóknak készült, akik rendkívül érdeklődnek a magyar foci világa iránt. Olvashat rövid leírást az 2021-2022-es szezon NB1-ben szereplő csapatairól és azok stadionjairól. Továbbá a Magyar felnőtt férfi válogatott játékosait is megtekintheti (2022). Ezentúl amennyiben szeretne, várásolhat Magyar válogatottas termékeket is. 
+
+3.
+1:JS code: Javascript programot kellett írjak a webshop oldalon annak érdekében, hogy a "Összeg kiszámítása" gombra kattintva, a mellete lévő eredmény text formban megjelenjen a kívánt összeg.
+	JS code működése: Var változókban eltároltam az egyes termékek egységárát. Let változókban tárolom a felhasználó által kívánt egyes termékekből kivánt mennyiséget. 
+	Ezentúl mivel a felhasználó kérhet a termékekre extrát( felirat/szám) , ezt egy radio gombbal oldottam meg, amely ha checked, akkor pl a hoodie basic részösszeghez db*500 Ft-ot hozzáadok.Az egyes termékek összegét összeadva megkapom a kosárnak a végösszegét.
+
+4. Az egész weboldalon egy Google Web font-ot használok: neve:Roboto Condensed
+A webshop oldal head részében hívtam meg a linket:
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
+
+css-ben:font-family: 'Radio Canada', sans-serif;
+
+5. html5 új form elemeket a webshop oldalon a termékek kiválasztásánál ( color), illetve a szállítási adatoknál (tel, date, email) használtam.
+
+
+A weblaphoz használt források:
+A válogatott játkosok adatai és képei: https://valogatott.mlsz.hu/ferfi-a-valogatott
+A stadionok képei és leírásai: https://hu.wikipedia.org/wiki/Magyar_labdar%C3%BAg%C3%B3-stadionok_list%C3%A1ja
+
+
+Ui:
+A javascript file-kat kiszerettem volna írni külön fileba , viszont valamiért ez esetben összeomlott az egész program és nem működött. (Tisztában vagyok azzal, hogy a script src részébe kell az url-t írni)
